@@ -1,0 +1,53 @@
+@import "./style/color.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Quicksand;
+}
+.landing {
+  height: 100vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  .landing__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    .landing__img__wrapper {
+      height: 25%;
+    }
+    .landing__list__wrapper {
+      color: $secondary_color;
+      height: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .landing__list:hover {
+        border-left: 4px solid $primary_color;
+      }
+    }
+    .landing__cart__wrapper {
+      height: 10%;
+      .landing__cart {
+        color: $third_color;
+        background-color: $primary_color;
+        height: 35px;
+        width: 35px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .landing__mid {
+    
+    margin-left: 3rem;
+    margin-right: 3rem;
+    .landing__mid_heading {
+      color: $primary_color;
+    }
+  }
+}
