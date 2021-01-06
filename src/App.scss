@@ -14,6 +14,7 @@ body {
   flex-direction: row;
   text-align: center;
   .landing__left {
+    width: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,11 +44,97 @@ body {
     }
   }
   .landing__mid {
-    
     margin-left: 3rem;
     margin-right: 3rem;
-    .landing__mid_heading {
-      color: $primary_color;
+    .landing__header__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .landing__header__heading {
+        width: 60%;
+        text-align: justify;
+        color: $secondary_color;
+        .landing__mid_heading {
+          text-align: justify;
+          color: $primary_color;
+        }
+      }
+      .landing__header__input__wrapper {
+        position: relative;
+        .landing__header__search {
+          position: absolute;
+          margin-top: 10px;
+          color: $secondary_color;
+          margin-left: 5px;
+        }
+        .landing__header__input {
+          border-radius: 4px;
+          outline: none;
+          padding-left: 25px;
+          width: 100%;
+          height: 40px;
+        }
+      }
+    }
+    .landing__category__wrapper {
+      text-align: start;
+      /****************heading main category****************/
+      .m__category__wrapper {
+        margin-top: 3rem;
+        .m__category__heading {
+          color: $secondary_color;
+        }
+      }
+      .s__category__wrapper {
+        display: flex;
+        height: 50px;
+        .m__category__p {
+          font-size: 16px;
+          font-weight: 3;
+          text-align: center;
+          background-color: $forth_color;
+          margin-top: 10px;
+          padding-top: 10px;
+          padding-left: 2px;
+          margin-left: 5rem;
+          color: $secondary_color;
+          .m__category__plus {
+            margin-left: 5rem;
+          }
+        }
+      }
+      .s__category__wrapper {
+        .m__category__p:hover {
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+  }
+  .landing__right {
+    width: 30%;
+    .shopping__list {
+      background-color: $six_color;
+      .shopping__list__add {
+        background-color: $five_color;
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        .shopping__list__add__img {
+          width: 40%;
+          height: 100px;
+        }
+        .shopping__list__wrapper {
+          margin-top: 1rem;
+          width: 40%;
+          .shopping__list__wrapper__p {
+            color: $third_color;
+          }
+          .btn {
+            margin-top: 10px;
+            margin-bottom: 1rem;
+          }
+        }
+      }
     }
   }
 }

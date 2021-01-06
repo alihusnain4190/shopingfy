@@ -46,7 +46,7 @@ module.exports = [
   },
   {
     s_id: 5,
-    s_name: "chicken",
+    s_name: "Burn Dogs",
     s_price: 12,
     s_img: "",
     s_desp:

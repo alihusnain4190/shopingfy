@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../img/logo.svg";
 import mainCategory from "../data/mCategory";
 import MainCategory from "../Components/MainCategory";
 import SubCategory from "../Components/SubCategory";
+import ShoppingList from "../Components/ShoppingList";
 import {
   FaList,
   FaHistory,
@@ -11,6 +12,10 @@ import {
   FaSearch,
 } from "react-icons/fa";
 const Landing = () => {
+  const [item, setItem] = useState({ id: 0, name: "", m_id: 0 });
+  const itemName = (name, id, m_id) => {
+    setItem({ id: id, name: name, m_id: m_id });
+  };
   return (
     <main className="landing">
       <section className="landing__left">
@@ -33,30 +38,36 @@ const Landing = () => {
         </div>
       </section>
       <section className="landing__mid">
-        <div>
-          <div>
+        <div className="landing__header__wrapper">
+          <div className="landing__header__heading">
             <h1>
               <span className="landing__mid_heading">Shopping</span> allows you
               take your shopping list whereever you go
             </h1>
-            <div>
-              <FaSearch />
-              <input type="text" placeholder="search item" />
-            </div>
+          </div>
+          <div className="landing__header__input__wrapper">
+            <FaSearch className="landing__header__search" />
+            <input
+              className="landing__header__input"
+              type="text"
+              placeholder="search item"
+            />
           </div>
         </div>
-        <div>
+        <div className="landing__category__wrapper">
           {mainCategory.map((mCategory) => {
             return (
-              <>
-                <MainCategory mCategory={mCategory} />;
-                <SubCategory mCategory={mCategory} />
-              </>
+              <div key={mCategory.m_id} className="main__sub__wrapper">
+                <MainCategory mCategory={mCategory} />
+                <SubCategory mCategory={mCategory} itemName={itemName} />
+              </div>
             );
           })}
         </div>
       </section>
-      <section className="landing__right"></section>
+      <section className="landing__right">
+        <ShoppingList item={item} />
+      </section>
     </main>
   );
 };
