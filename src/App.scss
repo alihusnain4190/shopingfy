@@ -8,8 +8,9 @@ body {
   font-family: Quicksand;
 }
 .landing {
+  margin: 2rem;
+
   height: 100vh;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -44,6 +45,7 @@ body {
     }
   }
   .landing__mid {
+    width: 60%;
     margin-left: 3rem;
     margin-right: 3rem;
     .landing__header__wrapper {
@@ -87,7 +89,7 @@ body {
       }
       .s__category__wrapper {
         display: flex;
-        height: 50px;
+        flex-wrap: wrap;
         .m__category__p {
           font-size: 16px;
           font-weight: 3;
@@ -96,7 +98,7 @@ body {
           margin-top: 10px;
           padding-top: 10px;
           padding-left: 2px;
-          margin-left: 5rem;
+          margin-left: 1rem;
           color: $secondary_color;
           .m__category__plus {
             margin-left: 5rem;
@@ -125,6 +127,7 @@ body {
         }
         .shopping__list__wrapper {
           margin-top: 1rem;
+
           width: 40%;
           .shopping__list__wrapper__p {
             color: $third_color;
@@ -132,6 +135,283 @@ body {
           .btn {
             margin-top: 10px;
             margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .shopping {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        .shop {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .shop__h4 {
+            text-align: start;
+          }
+        }
+        .shopping_item {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+          color: $forth_color;
+          .shopping_item_detail {
+            display: flex;
+            margin-left: 1rem;
+            .shop__del {
+              margin: 5px;
+              color: $primary_color;
+            }
+            .item__quantity {
+              display: flex;
+
+              margin-left: 1rem;
+              .item_q {
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 20px;
+                border: 2px solid $primary_color;
+                color: $primary_color;
+              }
+              .item_p {
+                padding-top: 5px;
+                margin-right: 2px;
+                margin-left: 2px;
+                font-weight: bold;
+                color: $primary_color;
+              }
+            }
+          }
+        }
+      }
+      .shopping__list__input {
+        position: relative;
+        margin-top: 2rem;
+
+        .list__btn {
+          position: absolute;
+          text-align: right;
+        }
+        .list__input {
+          border-radius: 4px;
+          outline: none;
+          padding-left: 25px;
+          width: 70%;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .landing {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    .landing__left {
+      width: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      .landing__img__wrapper {
+        height: 25%;
+      }
+      .landing__list__wrapper {
+        color: $secondary_color;
+        height: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .landing__list:hover {
+          border-left: 4px solid $primary_color;
+        }
+      }
+      .landing__cart__wrapper {
+        height: 10%;
+        .landing__cart {
+          color: $third_color;
+          background-color: $primary_color;
+          height: 35px;
+          width: 35px;
+          border-radius: 4px;
+        }
+      }
+    }
+    .landing__mid {
+      width: 60%;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      .landing__header__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .landing__header__heading {
+          width: 60%;
+          text-align: justify;
+          color: $secondary_color;
+          .landing__header__h {
+            font-size: 0.8rem;
+            .landing__mid_heading {
+              text-align: justify;
+              color: $primary_color;
+            }
+          }
+        }
+        .landing__header__input__wrapper {
+          margin-left: 1rem;
+          position: relative;
+          .landing__header__search {
+            position: absolute;
+            margin-top: 10px;
+            color: $secondary_color;
+            margin-left: 5px;
+          }
+          .landing__header__input {
+            border-radius: 4px;
+            outline: none;
+            padding-left: 25px;
+            width: 100%;
+            height: 40px;
+          }
+        }
+      }
+      .landing__category__wrapper {
+        text-align: start;
+        /****************heading main category****************/
+        .m__category__wrapper {
+          margin-top: 3rem;
+          .m__category__heading {
+            margin-top: 1rem;
+            color: $secondary_color;
+          }
+        }
+        .s__category__wrapper {
+          display: flex;
+          flex-wrap: wrap;
+
+          .m__category__p {
+            font-size: 12px;
+            font-weight: 3;
+            border-radius: 4px;
+            text-align: center;
+            background-color: $forth_color;
+            margin-top: 10px;
+            padding-top: 6px;
+            padding-left: 1px;
+            padding-bottom: 6px;
+            margin-left: 1rem;
+            color: $secondary_color;
+            .m__category__plus {
+              margin-left: 1rem;
+            }
+          }
+        }
+        .s__category__wrapper {
+          .m__category__p:hover {
+            transform: scale(1.1, 1.1);
+          }
+        }
+      }
+    }
+    .landing__right {
+      width: 30%;
+      .shopping__list {
+        background-color: $six_color;
+        .shopping__list__add {
+          background-color: $five_color;
+          width: 100%;
+          border-radius: 20px;
+          display: flex;
+          .shopping__list__add__img {
+            width: 30%;
+            height: 100px;
+          }
+          .shopping__list__wrapper {
+            margin-top: 1rem;
+            width: 40%;
+            .shopping__list__wrapper__p {
+              color: $third_color;
+              font-size: 0.7rem;
+            }
+            .btn {
+              margin-top: 10px;
+              margin-bottom: 1rem;
+              font-size: 7px;
+            }
+          }
+        }
+
+        .shopping {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          .shop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .shop__h4 {
+              text-align: start;
+            }
+          }
+          .shopping_item {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: $forth_color;
+            .shopping_item_detail {
+              display: flex;
+              margin-left: 1rem;
+              .shop__del {
+                margin: 5px;
+                color: $primary_color;
+              }
+              .item__quantity {
+                display: flex;
+
+                margin-left: 1rem;
+                .item_q {
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  border-radius: 20px;
+                  border: 2px solid $primary_color;
+                  color: $primary_color;
+                }
+                .item_p {
+                  padding-top: 5px;
+                  margin-right: 2px;
+                  margin-left: 2px;
+                  font-weight: bold;
+                  color: $primary_color;
+                }
+              }
+            }
+          }
+        }
+        .shopping__list__input {
+          position: relative;
+          margin-top: 2rem;
+
+          .list__btn {
+            position: absolute;
+            text-align: right;
+          }
+          .list__input {
+            border-radius: 4px;
+            outline: none;
+            padding-left: 25px;
+            width: 70%;
+            height: 40px;
           }
         }
       }

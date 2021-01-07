@@ -21,6 +21,95 @@ module.exports = [
     s_quantity: 0,
     m_id: 1,
   },
+    {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+  {
+    s_id: 1,
+    s_name: "banana",
+    s_price: 1,
+    s_img: "",
+    s_desp:
+      'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called "plantains", distinguishing them from dessert bananas.',
+    s_status: false,
+    s_quantity: 0,
+    m_id: 1,
+  },
+
   {
     s_id: 3,
     s_name: "potato",

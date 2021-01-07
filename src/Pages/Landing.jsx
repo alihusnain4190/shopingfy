@@ -4,6 +4,7 @@ import mainCategory from "../data/mCategory";
 import MainCategory from "../Components/MainCategory";
 import SubCategory from "../Components/SubCategory";
 import ShoppingList from "../Components/ShoppingList";
+
 import {
   FaList,
   FaHistory,
@@ -40,7 +41,7 @@ const Landing = () => {
       <section className="landing__mid">
         <div className="landing__header__wrapper">
           <div className="landing__header__heading">
-            <h1>
+            <h1 className="landing__header__h">
               <span className="landing__mid_heading">Shopping</span> allows you
               take your shopping list whereever you go
             </h1>
