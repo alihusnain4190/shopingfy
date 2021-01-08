@@ -86,6 +86,19 @@ body {
         .m__category__heading {
           color: $secondary_color;
         }
+        .m__category__wrapper__edit {
+          display: none;
+        }
+      }
+      .m__category__wrapper:hover {
+        display: flex;
+        .m__category__wrapper__edit {
+          display: block;
+          margin-left: 1rem;
+          width: 20px;
+          text-align: center;
+          margin-top: 0.3rem;
+        }
       }
       .s__category__wrapper {
         display: flex;

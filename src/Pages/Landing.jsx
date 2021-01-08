@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../img/logo.svg";
 import mainCategory from "../data/mCategory";
 import MainCategory from "../Components/MainCategory";
@@ -17,6 +17,22 @@ const Landing = () => {
   const itemName = (name, id, m_id) => {
     setItem({ id: id, name: name, m_id: m_id });
   };
+  const [mCategory, setMainCategory] = useState([]);
+  useEffect(() => {
+    setMainCategory(mainCategory);
+  }, [mCategory]);
+  console.log(mCategory);
+  const changeMainHeading = (heading) => {
+    // setMainCategory(
+    //   mCategory.map((category) => {
+    //     if (category.m_id === heading.m_id) {
+    //       return { ...category, m_name: heading.m_name, m_id: heading.m_id };
+    //     }
+    //     return category;
+    //   })
+    // );
+  };
+  console.log(mCategory);
   return (
     <main className="landing">
       <section className="landing__left">
@@ -56,10 +72,13 @@ const Landing = () => {
           </div>
         </div>
         <div className="landing__category__wrapper">
-          {mainCategory.map((mCategory) => {
+          {mCategory.map((mCategory) => {
             return (
               <div key={mCategory.m_id} className="main__sub__wrapper">
-                <MainCategory mCategory={mCategory} />
+                <MainCategory
+                  mCategory={mCategory}
+                  changeMainHeading={changeMainHeading}
+                />
                 <SubCategory mCategory={mCategory} itemName={itemName} />
               </div>
             );
