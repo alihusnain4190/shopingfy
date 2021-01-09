@@ -21,16 +21,15 @@ const Landing = () => {
   useEffect(() => {
     setMainCategory(mainCategory);
   }, [mCategory]);
-  console.log(mCategory);
   const changeMainHeading = (heading) => {
-    // setMainCategory(
-    //   mCategory.map((category) => {
-    //     if (category.m_id === heading.m_id) {
-    //       return { ...category, m_name: heading.m_name, m_id: heading.m_id };
-    //     }
-    //     return category;
-    //   })
-    // );
+    const newArr = mCategory.map((category) => {
+      if (category.m_id === heading.m_id) {
+        return { m_name: heading.m_name };
+      }
+      return category;
+    });
+
+    setMainCategory(newArr);
   };
   console.log(mCategory);
   return (

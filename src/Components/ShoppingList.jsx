@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import shop from "../img/source.svg";
 import Button from "@material-ui/core/Button";
+import ShopingListForm from "./ShopingListForm";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 import mainCategory from "../data/mCategory";
 
 const ShoppingList = (props) => {
   const [show, setShow] = useState(false);
+  const [form, setForm] = useState(false);
   const [items, setItems] = useState([]);
   const [mCategory, setCategory] = useState([]);
   useEffect(() => {
@@ -19,7 +21,10 @@ const ShoppingList = (props) => {
   const handleShow = () => {
     setShow(!show);
   };
-
+  const handleAddForm = () => {
+    setForm(true);
+  };
+  if (form === true) return <ShopingListForm />;
   if (show === false)
     return (
       <div className="shopping__list">
@@ -29,9 +34,11 @@ const ShoppingList = (props) => {
             <h4 className="shopping__list__wrapper__p">
               Didn't find What you need
             </h4>
-            <Button className="btn" variant="contained">
-              Add item
-            </Button>
+            <Button
+              className="btn"
+              variant="contained"
+              onClick={handleAddForm}
+            >AddItem</Button>
           </div>
         </div>
         <div className="shopping">
